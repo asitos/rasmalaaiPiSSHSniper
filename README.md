@@ -1,4 +1,4 @@
-# rasmalaaiPiSniper
+# rasmalaaiPiSSHSniper
 
 a lightweight, zero-dependency intrusion prevention system (ips) written in native c++ for headless linux arm nodes. it intercepts ssh brute-force vectors in real-time by streaming systemd journal logs and dynamically manipulating the linux kernel's packet filtering tables.
 
@@ -35,7 +35,7 @@ make clean
 
 ## technical architecture
 
-unlike traditional python-based tools or shell scripts that poll log files at regular intervals, `rasmalaaiPiSniper` leverages low-level linux systems apis for maximum performance and a negligible cpu footprint.
+unlike traditional python-based tools or shell scripts that poll log files at regular intervals, `rasmalaaiPiSSHSniper` leverages low-level linux systems apis for maximum performance and a negligible cpu footprint.
 
 ### 1. event-driven logging via posix pipes (`popen`)
 instead of parsing a flat `/var/log/auth.log` file using an active polling loop (which wastes cpu cycles and introduces file-io bottlenecks), this engine utilizes a posix pipe (`popen`) to hook directly into the `systemd-journald` binary stream:
