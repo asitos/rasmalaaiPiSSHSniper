@@ -19,8 +19,6 @@ chmod +x ssh-sniper/ssh-sniper
 
 ./ssh-sniper/ssh-sniper
 
-# clean up build artifacts
-make clean
 ```
 
 ## directory structure
